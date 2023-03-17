@@ -10,7 +10,7 @@ import com.example.accountapp.ui.OutputInterface;
  * series of improvements you'll need to make as you progress through
  * the lessons in Module 6.
  */
-public class Account
+public class Account<Number>
 {
     /**
      * This is the variable that stores our OutputInterface instance.
@@ -33,7 +33,7 @@ public class Account
     /**
      * Number of the account.
      */
-    private int number;
+    private Number number;
 
     /**
      * Current balance in the account.
@@ -107,7 +107,7 @@ public class Account
 
     public void setNumber()
     {
-        this.number = count++;
+        this.number = (Number) Integer.valueOf(count++);
     }
 
     public String getName()
@@ -115,7 +115,7 @@ public class Account
         return name;
     }
 
-    public int getNumber()
+    public Number getNumber()
     {
         return number;
     }
